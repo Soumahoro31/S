@@ -1,0 +1,2373 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Surf For Free</title>
+</head>
+
+<body>
+  <header class="header-section">
+    
+    <div onclick="logoContainer()" class="logo-container">
+      <p>Surf For Free</p>
+      <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736341884/images_kwqyzj-removebg-preview_a4nrem.png" alt="Logo"> 
+     
+    </div>
+
+    <nav class="nav-container">
+      <div id="navbar-icon" class="navbar-icon">
+        <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </div>
+
+      <ul id="nav-list" class="nav-list">
+        <li class="dropdown-container">
+          <span class="dropdown-trigger">Pays</span>
+          <ul class="dropdown-menu">
+            <li class="country" onclick="coteIvoire()">Côte d'Ivoire <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735541684/images_1_dqqs6q.jpg" alt="drapeau"></span></li>
+
+            <li class="country" onclick="cameroun()">Cameroun <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/c_thumb,w_200,g_face/v1735542008/t%C3%A9l%C3%A9chargement_1_fuvnb3.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="senegal()">Sénégal <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736527445/fb1mrukx4fhxua3glg2z.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="burkina()">Burkina Faso <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736527599/g3rs2pgzlwtp55cni66p.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="mali()">Mali <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736527799/oaiwayg8e9mxzbagrulv.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="niger()">Niger <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736527866/oxi685xpibl6h8ucrg3v.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="guinee()">Guinée <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736534863/yepc1xusawma1903y60n.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="togo()">Togo<span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736534914/dwreqyu4xrfg2raanfsc.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="bénin()">Bénin <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736534969/a26q4mvrqei3ipiiue7p.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="congoRd()">RD Congo <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535028/jirqixw72yjwssxttidu.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="congoRépublique()">République du Congo <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535374/kuikcgmk0ghfr2vydyo3.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="algerie()">Algérie <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535437/x7agzlgwlkmceuqktoxb.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="tunisie()">Tunisie <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535522/dtmpm3jgunkjrxwi4w9s.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="madagascar()">Madagascar <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535607/smu6dewal3gbarfcl7ob.png" alt="drapeau"></span></li>
+
+            <li class="country" onclick="nigeria()">Nigeria <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535769/images_s1lyql.jpg" alt="drapeau"></span></li>
+
+            <li class="country" onclick="sudAfric()">Afrique du Sud <span class="country-color"><img style="width: 25px;" src="https://res.cloudinary.com/dmphpkfej/image/upload/v1736535840/tjjss0ak6dz5ugp6vhjk.png" alt="drapeau"></span></li>
+          </ul>
+        </li>
+
+        <li><a href="index4.html">Information</a></li>
+        <li><a href="https://t.me/Surf_For_Free_services" target="_blank">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-section">
+    <section id="hero-section" class="hero-section">
+      <video class="video-background" autoplay muted loop>
+        <source src="https://res.cloudinary.com/dmphpkfej/video/upload/v1736626422/dbif6w7wj5weyflrdty8.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1>Naviguez Gratuitement, en Toute Sécurité !</h1>
+        <p>Téléchargez des fichiers VPN gratuits pour rester connecté partout dans le monde. Une navigation rapide,
+          sécurisée et sans frais.</p>
+        <div class="hero-buttons">
+          <a id="freeBtn"
+  data-file="𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑" 
+  data-option="𝙂𝙍𝘼𝙏𝙐𝙄𝙏" 
+  data-price="0𝙁"
+          class="btn btn-primary">Télécharger maintenant</a>
+           
+          <a id="preniumBtn" href="#premium-plans" class="btnj btn-secondary">
+            <span class="spinner"></span>
+            <span id="premium-span1">Voir nos Offres Premium</span>
+          </a>
+        </div>
+      </div>
+
+      <div 
+      class="modal-conatainer" id="free-modal">
+        <div class="modal">
+          <a id="close-free-modal" class="close-modalContainer">X</a>
+          <div class="id-input-container">
+            <p for="VPN-id">VPN ID</p>
+  
+            <textarea  name="vpn-id" id="vpnId-textarea" placeholder="Entrez VPN id ici..." rows="1" required></textarea>
+  
+            <a data-vpnId=""  id="updateButton">
+              <span id="span1">Entregistrer</span> 
+              <span id="span2">Entregistré</span>
+               <span id="confirme-action" class="confirme-action"> ✓</span></a>
+          </div>
+          <h3>Obtenir via : </h3>
+          <ul>
+            <li class="btn btn-whatsapp" id="whatsapp-btn">WhatsApp</li>
+  
+            <li class="btn btn-telegram" id="telegram-btn">Telegram</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages-section">
+      <div class="container">
+        <h2>Pourquoi choisir nos fichiers VPN ?</h2>
+        <p class="section-description">
+          Découvrez les avantages de nos fichiers VPN qui garantissent un accès rapide, sécurisé et sans limite à
+          Internet.
+        </p>
+        <div class="advantages-grid">
+          <div class="advantage">
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734447937/th_lwbbb6.jpg" alt="icône fast">
+            <h3>Sécurité Maximale</h3>
+            <p>Protégez vos données personnelles et naviguez en toute sécurité.</p>
+          </div>
+
+          <div class="advantage">
+            <img  src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734448299/th_synioo.jpg" alt="icône fast">
+            <h3>Connexion Rapide</h3>
+            <p>Profitez d'une vitesse de navigation optimale où que vous soyez.</p>
+          </div>
+
+          <div class="advantage">
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734482190/images_kwqyzj.png" alt="icône fast">
+            <h3>100% Gratuit</h3>
+            <p>Accédez à des fichiers VPN gratuits sans frais cachés.</p>
+          </div>
+
+          <div class="advantage">
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734448456/th_moj84z.jpg" alt="icône fast">
+            <h3>Facilité d'utilisation</h3>
+            <p>Configurez votre VPN en quelques étapes simples, même pour les débutants.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="npv-section">
+      <h2>Choix du VPN</h2>
+      <p class="desciption-section">Découvrez les avantages de nos fichiers VPN qui garantissent un accès rapide,
+        sécurisé et sans limite à Internet.</p>
+        <!-- PASS DIREST -->
+      <div  class="file-list container-cont">
+        <h3>Fichier MTN Direct</h3>
+        <div id="vpnContainer" class="container">
+
+          <!-- 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑 -->
+          <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN:<span> 𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑" 
+            data-option="𝟭 𝙢𝙤𝙞𝙨" 
+            data-price="3000𝙁"
+            >Acheter</button>
+
+            <ul>
+             <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+          </div>
+
+          <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN: <span> 𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑 " 
+            data-option="𝟮 𝙢𝙤𝙞𝙨" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN: <span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑" 
+            data-option="𝟯 𝙢𝙤𝙞𝙨" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="
+                https://play.google.com/store/apps/details?id=com.hatunnel.plus">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HA TUNNEL"  class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉 -->
+          <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=istark.vpn.starkreloaded">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span> 𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍 -->
+          <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=com.evozi.injector">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <!-- <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙎𝙀𝙈𝘼𝙄𝙉𝙀</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙎𝙀𝙈𝘼𝙄𝙉𝙀" 
+            data-price="1000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>1000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP CUSTOM"  class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP CUSTOM"  class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP CUSTOM"  class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <div data-name="DARK TUNNEL"  class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="
+                https://play.google.com/store/apps/details?id=net.darktunnel.app">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <!-- <div data-name="REZ TUNNEL" class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙎𝙀𝙈𝘼𝙄𝙉𝙀</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙎𝙀𝙈𝘼𝙄𝙉𝙀" 
+            data-price="1000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>1000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="REZ TUNNEL"  class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="REZ TUNNEL"  class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="REZ TUNNEL"  class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇-->
+           <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=com.newtoolsworks.sockstunnel">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎/span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <!-- <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙎𝙀𝙈𝘼𝙄𝙉𝙀</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙎𝙀𝙈𝘼𝙄𝙉𝙀" 
+            data-price="1000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>1000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝘿𝙞𝙧𝙚𝙘𝙩𝙚-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- PASS MICROSOLF teams -->
+      <div class="container-cont">
+        <h3>Pass Microsolf teams</h3>
+        <div id="vpnContainer" class="container">
+
+           <!-- 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑 -->
+          <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN:<span> 𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="
+                https://play.google.com/store/apps/details?id=com.napsternetlabs.napsternetv">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+
+            <ul>
+             <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+          </div>
+
+          <!-- <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN: <span> 𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑 " 
+            data-option="𝟮 𝙢𝙤𝙞𝙨" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=com.hatunnel.plus">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉 -->
+          <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span> 𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=istark.vpn.starkreloaded">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍 -->
+          <!-- <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <!-- <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <!-- <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <!-- <div data-name="REZ TUNNEL" class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="REZ TUNNEL" class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+
+          <!-- 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇-->
+          <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=com.newtoolsworks.sockstunnel">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎/span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="
+                https://play.google.com/store/apps/details?id=dev.epro.ssc">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙞𝙘𝙧𝙤𝙨𝙤𝙛𝙩-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- PASS WHATSAPP -->
+      <div class="container-cont">
+        <h3>Pass WhatsApp</h3>
+        <div id="vpnContainer" class="container">
+
+           <!-- 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑 -->
+           <!-- <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN:<span> 𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑" 
+            data-option="𝟭 𝙢𝙤𝙞𝙨" 
+            data-price="2000𝙁"
+            >Acheter</button>
+
+            <ul>
+             <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+          </div>
+
+          <div data-name="NAPSTERNETV" class="file npv-content">
+            <h3> 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734542538/dvknc5tajrnbnfbfqqug.png"
+              alt="vpn-img">
+            <p> Avec les fichiers 𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑, profitez d'une navigation stable, idéale pour les
+              téléchargements et les réseaux sociaux.</p>
+            <ul>
+              <li>Fichier VPN: <span> 𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙉𝘼𝙋𝙎𝙏𝙀𝙍𝙉𝙀𝙏𝙑 " 
+            data-option="𝟮 𝙢𝙤𝙞𝙨" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="
+                https://play.google.com/store/apps/details?id=com.hatunnel.plus">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="HA TUNNEL" class="file npv-content">
+            <h3>𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535475/bhq6hwdwttosrd4ct64l.jpg"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion fiable et sans interruptions, idéale pour
+              le
+              streaming et le gaming.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙃𝘼 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉 -->
+          <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span> 𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=istark.vpn.starkreloaded">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="STARK VPN" class="file npv-content">
+            <h3>𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535360/eixdjkzmv1j4m23elcn2.png"
+              alt="vpn-img">
+            <p>Avec les fichiers 𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉, profitez d'une connexion ultra-rapide pour streaming HD, et
+              téléchargements volumineux.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍 -->
+          <!-- <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP INJECTOR" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535638/shvca3lfffwn0pmtn2fu.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝙄𝙉𝙅𝙀𝘾𝙏𝙊𝙍, profitez d'une navigation fluide et sécurisée, les réseaux
+              sociaux, et le travail en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙏𝘼𝙍𝙆 𝙑𝙋𝙉" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=xyz.easypro.httpcustom">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="
+                https://play.google.com/store/apps/details?id=net.darktunnel.app">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="DARK TUNNEL" class="file npv-content">
+            <h3>𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536627/vstzfrmtnplja3wrde6c.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇, naviguez anonymement et sécurisez vos données tout en
+              bénéficiant
+              d'une connexion fluide et rapide.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝘿𝘼𝙍𝙆 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇 -->
+          <!-- <div data-name="REZ TUNNEL" class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="REZ TUNNEL" class="file npv-content">
+            <h3>𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734536945/iz6ef6aqvdc4mjbpnfuf.jpg"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇, profitez d'une connexion ultra-rapide et stable,
+              spécialement conçue pour répondre à vos besoins en téléchargement.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙍𝙀𝙕 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇-->
+          <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=com.newtoolsworks.sockstunnel">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="SOCKSIP TUNNEL" class="file npv-content">
+            <h3>𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537025/l7nygxdrsuzpqbdgfy73.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇, bénéficiez d'une navigation fluide et sans restriction,
+              tout
+              en maintenant une sécurité optimale</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎/span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙊𝘾𝙆𝙎𝙄𝙋 𝙏𝙐𝙉𝙉𝙀𝙇" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+
+          <!-- 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <!-- <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="2000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>2000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="SSH CUSTOM" class="file npv-content">
+            <h3>𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734537190/p4mfsor2zuoa2ft5nnqz.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d’une connexion ultra-rapide,
+              tout
+              en garantissant un accès sans restriction à Internet.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MTN CI</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋-𝙎𝙎𝙃 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- PASS MOOV DIRECT -->
+      <div class="container-cont">
+        <h3 class="moov-h3">Fichier Moov direct</h3>
+        <div id="vpnContainer" class="container">
+
+          <!-- 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈 -->
+          <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 JOUR</span></li>
+
+              <li>RESEAU: <span>MOOV</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="https://play.google.com/store/apps/details?id=xyz.easypro.httpcustom">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙊𝙊𝙑-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 JOUR" 
+            data-price="0𝙁"
+            >Obtenir</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>0𝙁</span></li>
+            </ul>
+          </div>
+
+          <!-- <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟭 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MOOV</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙊𝙊𝙑-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟭 𝙈𝙊𝙄𝙎" 
+            data-price="3000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>3000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟮 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MOOV</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙊𝙊𝙑-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟮 𝙈𝙊𝙄𝙎" 
+            data-price="5000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>5000𝙁</span></li>
+            </ul>
+          </div>
+
+          <div data-name="HTTP CUSTOM" class="file npv-content">
+            <h3>𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈</h3>
+            <img src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734535748/soiphw9nulf0khxdilyx.png"
+              alt="vpn-img">
+            <p>Avec nos fichiers 𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈, profitez d'une connexion stable, rapide et sécurisée pour
+              répondre
+              à tous vos besoins en ligne.</p>
+            <ul>
+              <li>Fichier VPN:<span>𝟯 𝙈𝙊𝙄𝙎</span></li>
+
+              <li>RESEAU: <span>MOOV</span></li>
+              <li>VITESSE: <span>Très rapide</span></li>
+
+              <li>APK: <a href="#">Télécharger</a></li>
+            </ul>
+            <button class="buy-btn"
+            data-file="𝙈𝙊𝙊𝙑-𝙃𝙏𝙏𝙋 𝘾𝙐𝙎𝙏𝙊𝙈" 
+            data-option="𝟯 𝙈𝙊𝙄𝙎" 
+            data-price="7000𝙁"
+            >Acheter</button>
+            <ul>
+              <li>𝙋𝙍𝙄𝙓:<span>7000𝙁</span></li>
+            </ul>
+          </div> -->
+
+        </div>
+      </div>
+
+      <!-- <div class="modal-conatainer" id="payment-modal">
+        <div class="modal">
+          <a id="close-modal" class="close-modalContainer">X</a>
+          <div class="id-input-container">
+            <p for="VPN-id">VPN ID</p>
+
+            <textarea name="vpn-id" id="vpnId-textarea" placeholder="Entrez VPN id ici..." rows="1" required></textarea>
+
+            <a  id="updateButton" > Entregistrer <span id="confirme-action" class="confirme-action"> ✓</span></a>
+          </div>
+          <h3>Payer via : </h3>
+          <ul>
+            <li class="btn btn-whatsapp" id="whatsapp-btn">WhatsApp</li>
+
+            <li class="btn btn-telegram" id="telegram-btn">Telegram</li>
+          </ul>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="mission-section">
+      <h2>Notre Mission</h2>
+      <div class="container">
+        <p>
+          Chez Surf For Free, nous croyons en la liberté numérique et en la protection de votre vie privée en ligne.
+          Notre mission est de rendre l'Internet plus sûr et accessible en vous offrant des solutions VPN fiables et
+          faciles à utiliser,
+          tout en garantissant l'anonymat et la sécurité de vos données personnelles.
+        </p>
+
+        <div class="mission-images">
+          <div class="img-content">
+            <p>Activez vos données</p>
+            <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735541948/Screenshot_20241216-141748_UDP_Tunnel_yzkssh.jpg" alt="m-img">
+          </div>
+          <div class="img-content">
+            <p>Conecter le VPN</p>
+            <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735541971/Screenshot_20241216-141800_UDP_Tunnel_gibimu.jpg" alt="m-img">
+          </div>
+
+          <div class="img-content">
+            <p>Naviguez en FreeSurf</p>
+            <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735543034/Screenshot_20241230-071613_YouTube_1_khtspc.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="adv-section">
+      <div class="container">
+        <h2>Avantages et Inconvénients</h2>
+        <div class="content">
+          <div class="adves">
+            <h3>Avantages</h3>
+            <ul>
+              <li>Accès gratuit à des fichiers VPN fiables.</li>
+
+              <li>Protection de vos données personnelles en ligne.</li>
+
+              <li>Connexion rapide et sécurisée.</li>
+
+              <li>Compatibilité avec plusieurs appareils.</li>
+
+              <li>Simplicité d'installation et d'utilisation.</li>
+            </ul>
+          </div>
+
+          <div class="disadves">
+            <h3>Inconvénients</h3>
+            <ul>
+              <li>Certains fichiers VPN gratuits peuvent être limités en bande passante.</li>
+
+              <li>Les options premium offrent plus de fonctionnalités.</li>
+
+              <li>Une connexion instable sur certains réseaux mobiles.</li>
+
+              <li>Configuration avancée requise pour certains utilisateurs.</li>
+
+              <li>Publicités occasionnelles dans l'application.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Profitez d'une connexion rapide et sécurisée dès maintenant !</h2>
+        <p>Accédez à nos offres premium pour profiter d'une connexion plus rapide et d'une durée prolongée.</p>
+
+        <a id="btn" class="btnj cta-button">
+          <span class="spinner"></span>
+          <span id="premium-span2">Voir nos Offres Premium</span>
+       </a>
+      </div>
+      <div class="rotating-globe" id="globet">
+
+      </div>
+    </section>
+
+    <section class="installation-guide">
+      <h2>Guide d'installation</h2>
+      <p>Suivez ces étapes simples pour configurer votre VPN et commencer à naviguer en toute sécurité :</p>
+
+      <div class="installation-steps">
+        <!-- step1 -->
+        <div class="step">
+          <h3>Étape 1 : Téléchargez le fichier VPN</h3>
+          <p>Accédez à notre page de téléchargement et obtenez le fichier VPN adapté à votre appareil.</p>
+          <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735544034/Screenshot_20241230-072759_My_Files_1_hlvhz8.jpg" alt="Télécharger le fichier VPN">
+        </div>
+
+        <!-- step2 -->
+        <div class="step">
+          <h3>Étape 2 : Installez l'application VPN</h3>
+          <p>Installez l'application de votre choix (ex. UDP Tunnel, OpenVPN) pour utiliser le fichier téléchargé.</p>
+          <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735544124/Screenshot_20241230-073000_Google_Play_Store_1_s0eoq5.jpg" alt="Télécharger le fichier VPN">
+        </div>
+
+        <!-- step3 -->
+        <div class="step">
+          <h3>Étape 3 : Importez le fichier VPN</h3>
+          <p>Ouvrez l'application et importez le fichier VPN pour démarrer la configuration.</p>
+          <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735544288/Screenshot_20241230-073105_Npv_Tunnel_1_hvahol.jpg" alt="Télécharger le fichier VPN">
+        </div>
+
+        <!-- step4 -->
+        <div class="step">
+          <h3>Étape 4 : Connectez-vous</h3>
+          <p>Cliquez sur le bouton "Connecter" pour activer le VPN et commencer à naviguer en toute sécurité.</p>
+          <img src="https://res.cloudinary.com/dmphpkfej/image/upload/v1735541971/Screenshot_20241216-141800_UDP_Tunnel_gibimu.jpg" alt="Télécharger le fichier VPN">
+        </div>
+      </div>
+    </section>
+
+    <section class="fat-section">
+      <h2>Foire Aux Questions (FAQ)</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="fat-question">Comment télécharger un fichier VPN ?</button>
+          <div class="faq-answer">
+            <p>Pour télécharger un fichier VPN, cliquez sur la section des fichiers gratuits ou premium, sélectionnez
+              votre pays, puis suivez les instructions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="fat-question">Les fichiers VPN gratuits sont-ils sécurisés ?</button>
+          <div class="faq-answer">
+            <p>Oui, nos fichiers gratuits sont sécurisés. Cependant, nous recommandons toujours d'utiliser les fichiers
+              premium pour une meilleure performance.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="fat-question">Comment installer un fichier VPN sur mon téléphone ?</button>
+          <div class="faq-answer">
+            <p>Consultez notre section <strong>Guide d'installation</strong> pour suivre les étapes détaillées avec des
+              images et des vidéos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="fat-question">Puis-je partager les fichiers VPN avec d'autres ?</button>
+          <div class="faq-answer">
+            <p>Les fichiers VPN sont destinés à un usage personnel. Le partage peut entraîner des restrictions sur votre
+              compte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <h2 class="section-title">Témoignages</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial active">
+          <p class="testimonials-text">"Ce service VPN m'a vraiment simplifié la vie. Très facile à utiliser et fiable."
+          </p>
+          <h3 class="testimonials-author">— Jean Dupont</h3>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonials-text">"Grâce à Surf For Free, j'ai pu accéder à Internet en toute sécurité, même en
+            déplacement."</p>
+          <h3 class="testimonials-author">— Amina Sow</h3>
+        </div>
+
+
+        <div class="testimonial">
+          <p class="testimonials-text">"Service génial et des fichiers gratuits de grande qualité. Merci !"</p>
+          <h3 class="testimonials-author">— Mohamed Keita</h3>
+        </div>
+      </div>
+      <div class="stider-controls">
+        <button class="prev-btn">&lt;</button>
+        <button class="next-btn">&gt;</button>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2>Suivez nous</h2>
+      <div class="conctact-container">
+        <div class="channel-content">
+          <button onclick="goToContactPage()">Nous écris</button>
+          <div class="forum-content">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+              </svg>
+              Facebook
+            </a>
+  
+            <a href="https://t.me/toncompte" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.583 2.372a1.51 1.51 0 00-1.499-.172L3.112 9.268a1.5 1.5 0 00.156 2.814l4.48 1.346 1.893 5.172a1.5 1.5 0 002.644.263l2.097-2.708 4.302 3.376a1.5 1.5 0 002.405-1.049l1.683-15a1.5 1.5 0 00-.189-1.11zM17.77 18.477l-4.92-3.862a.75.75 0 00-1.124.118l-2.416 3.118-1.72-4.701 9.768-5.865L9.257 13.75l-4.06-1.22L20.562 4.64l-1.684 15z"/>
+              </svg>
+              Telegram
+            </a>
+            
+  
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              Instagram
+            </a>
+  
+            <!-- Logo YouTube -->
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48" fill="currentColor">
+                <path
+                  d="M41.6,14.2c-0.5-1.9-2-3.4-3.9-3.9C34.1,9.6,24,9.6,24,9.6s-10.1,0-13.7,0.7c-1.9,0.5-3.4,2-3.9,3.9C6,17.9,6,24,6,24s0,6.1,0.4,9.8c0.5,1.9,2,3.4,3.9,3.9c3.6,0.7,13.7,0.7,13.7,0.7s10.1,0,13.7-0.7c1.9-0.5,3.4-2,3.9-3.9c0.4-3.7,0.4-9.8,0.4-9.8S42,17.9,41.6,14.2z M19.8,31.3v-14.6L31.2,24L19.8,31.3z" />
+              </svg>
+              YouTube
+            </a>
+  
+            <!-- un logo Titok-->
+            <a href="#" target="_blank"
+              rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48" fill="currentColor">
+                <path
+                  d="M41.5,20.47c-3.45,0-6.45-1.4-8.68-3.65c-2.23-2.24-3.64-5.25-3.64-8.68h-4.62v29.28c0,7.69-6.23,13.92-13.92,13.92S0,44.11,0,36.42S6.23,22.5,13.92,22.5c1.13,0,2.23,0.13,3.28,0.37v5.08c-1.04-0.33-2.15-0.53-3.28-0.53c-4.88,0-8.83,3.95-8.83,8.83s3.95,8.83,8.83,8.83c4.87,0,8.83-3.95,8.83-8.83V10.64h8.25c0.7,5.83,5.67,10.42,11.7,10.42V20.47z" />
+              </svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+        <div class="images-cont">
+          <img onclick="telegramGroup()" src="https://res.cloudinary.com/ddqfmqin7/image/upload/v1734473671/uengzc1yhqsen3rtszaj.jpg"
+            alt="comunity-image">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Surf for Free 2023–2025. Tous droits réservés.</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
