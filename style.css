@@ -582,7 +582,7 @@ button:hover {
 
 .npv-section .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 20px;
   justify-content: start;
   max-width: 1200px;
@@ -603,7 +603,8 @@ button:hover {
 
 .npv-content h3 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: .625rem;
   color: #fff;
 }
 
@@ -614,7 +615,7 @@ button:hover {
 }
 
 .npv-content img {
-  max-width: 90px;
+  max-width: 80px;
   border-radius: 1px 20% ;
 }
 
