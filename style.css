@@ -43,7 +43,7 @@ button {
   background-color: #09e809;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 1.25rem;
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
@@ -86,7 +86,7 @@ button:hover {
 }
 
 .logo-container img {
-  width: 40px;
+  width: 2.5rem;
   border-radius: 5px;
   margin-left: 5px;
 }
@@ -229,7 +229,7 @@ button:hover {
 
 .hero-content h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
   color: white;
 }
@@ -242,7 +242,7 @@ button:hover {
 
 .hero-buttons a {
   display: inline-block;
-  padding: 15px 30px;
+  padding: .9375rem 30px;
   margin: 0 10px;
   font-size: 1rem;
   color: #fff;
@@ -272,8 +272,8 @@ button:hover {
 
 .spinner {
   display: none;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   border: 3px solid transparent;
   border-top: 3px solid #fff;
   border-left: 3px solid #fff;
@@ -298,97 +298,6 @@ button:hover {
   background: #0056b3;
 }
 
-.modal-conatainer {
-  position: fixed;
-  background-color: #21252916;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  z-index: 1000;
-  display: none;
-  text-align: center;
-}
-
-.modal-conatainer.active {
-  display: block;
-}
-
-.modal {
-  background-color: #004062;
-  max-width: 400px;
-  margin: auto;
-  margin-top: 150px;
-  padding-top: 3px;
-  padding-bottom: 25px;
-  position: relative;
-  border-radius: 10px;
-  line-height: 1.1rem;
-}
-
-.modal .close-modalContainer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.1rem;
-  padding: 0 8px;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: border 0.2s ease, color 0.2s ease;
-}
-
-.close-modalContainer:hover,
-.close-modalContainer:active  {
-  border: 1px solid #ffffff4f;
-  color: #fff;
-  transform: scale(1.03);
-}
-
-.modal-conatainer .modal h3 {
-  font-size: 1.8rem;
-  margin: 30px 0;
-  color: #fff;
-}
-
-.modal-conatainer .modal ul {
-  width: 90%;
-  margin: auto;
-  box-sizing: border-box;
-  list-style: none;
-  padding: 0;
-}
-
-.modal-conatainer .modal ul li {
-  background-color: #007bff;
-  margin-bottom: 20px;
-  padding: 13px 0;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  color: #fff;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.modal ul li:last-child {
-  margin-bottom: 0;
-  background-color: #0099cc;
-}
-
-.modal ul li:first-child,
-.modal ul li:first-child  {
-  background-color: #02e002;
-}
-
-.modal ul li:hover:first-child,
-.modal ul li:active:first-child  {
-  background-color: #03b503;
-}
-
-.modal ul li:hover:last-child,
-.modal ul li:active:last-child {
-  background-color: #027fa9;
-}
-
 /* id-input-container */
 .id-input-container {
   display: flex;
@@ -405,7 +314,7 @@ button:hover {
 
 .id-input-container textarea {
   width: 90%;
-  height: 20px;
+  height: 1.25rem;
   margin: auto;
   margin-bottom: 10px;
   font-size: 1rem;
@@ -452,7 +361,7 @@ button:hover {
 
 /* advantages-section */
 .advantages-section {
-  padding: 60px 20px;
+  padding: 60px 1.25rem;
   background-color: #041e2c;
   text-align: center;
 
@@ -465,27 +374,27 @@ button:hover {
 
 .advantages-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: #fff;
 }
 
 .advantages-section .section-description {
   font-size: 1.2rem;
   color: #ffffffd0;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .advantage {
   background-color: #0040623c;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
+  padding: 1.25rem;
   box-shadow: 0 4px 6px rgba(254, 253, 253, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   transform: scale(1);
@@ -499,7 +408,7 @@ button:hover {
 
 .advantage img {
   width: 60px;
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
   border-radius: 50% 1px;
 }
 
@@ -533,62 +442,32 @@ button:hover {
   color: #fff;
 }
 
-
-/* .container-cont .button-left {
-  left: 0;
-  border-radius: 0 5px 5px 0;
-}
-
-.container-cont .button-right {
-  right: 0;
-  border-radius: 5px 0 0 5px;
-} */
-
-/* .container-cont .button-right, .container-cont .button-left {
-  background-color: transparent;
-  position: absolute;
-  bottom: 0;
-  padding: 0 20px;
-  color: #0099cc;
-  transition: background-color 0.3s ease;
-}
-
-
-.container-cont .button-right:hover,
-.container-cont .button-left:hover,
-.container-cont .button-right:active,
-.container-cont .button-left:active {
-  background-color: #0099cc;
-  color: var(--background-color);
-} */
-
-
 .npv-section .container::-webkit-scrollbar {
   display: none;
 }
 
 .npv-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: #fff;
 }
 
 .npv-section .desciption-section {
   font-size: 1.2rem;
   color: #fff;
-  margin-bottom: 40px;
-  padding: 15px;
+  margin-bottom: 2.5rem;
+  padding: .9375rem;
 }
 
 .npv-section .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(14.0625rem, 1fr));
+  gap: 1.25rem;
   justify-content: start;
   max-width: 1200px;
   margin: 50px auto;
   margin-top: 0;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   grid-auto-flow: dense;
 }
 
@@ -596,7 +475,8 @@ button:hover {
   background-color: #0040623c;  
   border: 1px solid #dddddd4f;
   border-radius: 8px;
-  padding: 10px;
+  padding: .5rem;
+  padding-bottom: 0;
   box-shadow: 0 4px 6px rgba(245, 243, 243, 0.1);
   line-height: 1.1;
 }
@@ -626,7 +506,7 @@ button:hover {
   padding-left: 0;
   line-height: 1.4;
   margin: 0;
-  margin-top: 1rem;
+  margin-top: .625rem;
   color: #fff;
 }
 
@@ -663,13 +543,20 @@ span {
   font-size: .9rem;
 }
 
-.npv-content button {
-  min-width: 40px;
-  padding: 12px 60px;
-  margin: 5px auto auto;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+.btn-container {
+  margin-top: 1rem;
+}
+
+.btn-container a {
+  background-color: #02e002;
+  padding: .5rem 1.5625rem;
+  font-size: .9375rem;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-container a:hover {
+  background-color: #02a802;
 }
 
 /* cta-section */
@@ -749,14 +636,14 @@ span {
 /* mission */
 .mission-section {
   background-color: #041e2c;
-  padding: 40px 0;
+  padding: 2.5rem 0;
   text-align: center;
 }
 
 .mission-section h2 {
   font-size: 2rem;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .mission-section p {
@@ -764,7 +651,7 @@ span {
   color: #fff;
   max-width: 800px;
   margin: 0 auto 30px;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .mission-images {
@@ -785,7 +672,7 @@ span {
   background: linear-gradient(135deg, #343a3c, #0099cc);
   margin: auto;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .img-content p {
@@ -805,7 +692,7 @@ span {
 /* advantages-section */
 .adv-section {
   background-color: #041e2c;
-  padding: 50px 20px;
+  padding: 50px 1.25rem;
 }
 
 .adv-section h2 {
@@ -818,7 +705,7 @@ span {
 .adv-section .content {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 2.5rem;
   justify-content: center;
 }
 
@@ -828,7 +715,7 @@ span {
   border: 1px solid #dddddd4f;
   box-shadow: 0 4px 8px rgba(155, 154, 154, 0.1);
   border-radius: 8px;
-  padding: 20px;
+  padding: 1.25rem;
   width: 100%;
   max-width: 400px;
 }
@@ -837,13 +724,13 @@ span {
 .adv-section .disadves h3 {
   font-size: 1.8rem;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
 }
 
 .adv-section ul {
   list-style-type: disc;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .adv-section li {
@@ -858,7 +745,7 @@ span {
 
 /* installation-container */
 .installation-guide {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   background-color: #041e2c;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(203, 201, 201, 0.1);
@@ -870,7 +757,7 @@ span {
 .installation-guide h2 {
   font-size: 2rem;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .installation-guide p {
@@ -882,13 +769,13 @@ span {
 .installation-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .step {
   background-color: #0040623c;  
   /* border: 1px solid #dddddd4f; */
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(199, 199, 199, 0.1);
 }
@@ -903,7 +790,7 @@ span {
 .step p {
   font-size: 0.95rem;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
   text-align: left;
 }
 
@@ -927,7 +814,7 @@ span {
 
 /* fat-section */
 .fat-section {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   border-radius: 10px;
   max-width: 1200px;
   margin: 0 auto;
@@ -943,7 +830,7 @@ span {
 .faq-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: .9375rem;
 }
 
 .faq-item {
@@ -965,7 +852,7 @@ span {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 15px;
+  padding: .9375rem;
   border: none;
   cursor: pointer;
   text-align: left;
@@ -977,7 +864,7 @@ span {
 }
 
 .faq-answer {
-  padding: 0 15px;
+  padding: 0 .9375rem;
   font-size: 1rem;
   color: #555;
   border-top: 1px solid #ddd;
@@ -988,14 +875,14 @@ span {
 
 /* Afficher la réponse lorsqu'elle est active */
 .faq-item.active .faq-answer {
-  max-height: 200px;
-  padding: 15px;
+  max-height: 12.5rem;
+  padding: .9375rem;
 }
 
 
 /* testimonials-section */
 .testimonials-section {
-  padding: 50px 20px;
+  padding: 50px 1.25rem;
   text-align: center;
   background-color: #0040623c;
 }
@@ -1036,7 +923,7 @@ span {
   font-size: 1.2rem;
   line-height: 1.5;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .testimonials-author {
@@ -1047,14 +934,14 @@ span {
 
 /* Boutons de navigation */
 .stider-controls  {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .stider-controls button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  padding: 10px .9375rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
@@ -1104,7 +991,7 @@ span {
 .forum-content {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: .9375rem;
   padding-top: 0;
   gap: 10px;
   align-items: left;
@@ -1115,7 +1002,7 @@ span {
   display: inline-flex;
   align-items: center;
   font-size: 1.4rem;
-  gap: 20px;
+  gap: 1.25rem;
   text-decoration: none;
   color: #fff;
   background-color: #007bff;
@@ -1162,7 +1049,7 @@ footer {
 
 @media (max-width: 767.5px) {
   .nav-list {
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .whole-step {
@@ -1175,13 +1062,13 @@ footer {
   }
 
   .mission-images {
-    gap: 15px;
-    padding: 0 20px;
+    gap: .9375rem;
+    padding: 0 1.25rem;
   }
 
   .header-section {
     position: relative;
-    padding: 10px 15px;
+    padding: 10px .9375rem;
   }
 
   .cta-section {
@@ -1189,7 +1076,7 @@ footer {
     padding: 1rem;
     color: #fff;
     border-radius: 10px;
-    margin: 0 15px;
+    margin: 0 .9375rem;
     width: 95%;
     margin: auto;
     box-sizing: border-box;
@@ -1224,8 +1111,8 @@ footer {
   }
 
   .npv-content {
-    max-width: 250px;
-    min-width: 250px;
+    max-width: 14.0625rem;
+    min-width: 14.0625rem;
   } 
 
 }
@@ -1280,7 +1167,7 @@ footer {
   }
   
   .header-section {
-    padding: 15px;
+    padding: .9375rem;
     padding-left: 8px;
   }
 
@@ -1310,18 +1197,18 @@ footer {
   } */
 
   .mission-images {
-    gap: 15px;
-    padding: 0 15px;
+    gap: .9375rem;
+    padding: 0 .9375rem;
   }
 
   .img-content {
     width: 260px;
-    padding: 0 15px;
+    padding: 0 .9375rem;
   }
   
 
   .img-content img {
-    width: 200px;
+    width: 12.5rem;
   }
 
   .conctact-container {
@@ -1347,7 +1234,7 @@ footer {
   }
 
   .adv-section {
-    padding: 40px 15px;
+    padding: 2.5rem .9375rem;
   }
 
   .hero-content h1 {
@@ -1367,14 +1254,13 @@ footer {
   }
 
   .npv-section .container {
-    padding: 0 15px;
-    gap: 15px;
+    padding: 0 .9375rem;
+    gap: .9375rem;
     margin: 30px auto;
   }
 
   .npv-content {
-    max-width: 200px;
-    min-width: 230px;
+    max-width: 12.5rem;
   }
 }
 
@@ -1382,7 +1268,7 @@ footer {
   .advantages-grid,
   .installation-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.25rem;
   }
 }
