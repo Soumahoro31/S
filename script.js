@@ -1,3 +1,4 @@
+
 // sélectionner le parent "pays"
 const header = document.querySelector('.header-section');
 

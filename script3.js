@@ -1,4 +1,5 @@
 
+
 // // Créer la scène
 const scene = new THREE.Scene();
 
