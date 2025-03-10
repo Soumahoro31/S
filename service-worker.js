@@ -1,22 +1,22 @@
 // Cache version et nom
 const CACHE_NAME = 'my-cache';
 const FILES_TO_CACHE = [
-    '/', // Page d'accueil
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/index2.html',
-    '/style2.css',
-    '/script2.js',
-    '/index3.html',
-    '/style3.css',
-    '/script3.js',
-    '/index4.html',
-    '/style4.css',
-    '/script4.js',
-    '/VPNserveur.html',
-    '/VPNserveur.css',
-    '/VPNserveur.js',
+    // '/', // Page d'accueil
+    // '/index.html',
+    // '/style.css',
+    // '/script.js',
+    // '/index2.html',
+    // '/style2.css',
+    // '/script2.js',
+    // '/index3.html',
+    // '/style3.css',
+    // '/script3.js',
+    // '/index4.html',
+    // '/style4.css',
+    // '/script4.js',
+    // '/VPNserveur.html',
+    // '/VPNserveur.css',
+    // '/VPNserveur.js',
     // Ajouter d'autres ressources si nécessaire
 ];
 
