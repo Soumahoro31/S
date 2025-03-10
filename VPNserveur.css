@@ -4,6 +4,7 @@
 
 .wrapper p {
     color: red;
+    
 }
 
 .serveur-container {
@@ -72,7 +73,8 @@
 
 
 /* modale */
-.modal {
+.modal,
+.error-modal {
     display: none;
     background-color: white;
     top: 50%;
@@ -86,6 +88,7 @@
     z-index: 1000;
     color: #007bff;
     box-sizing: border-box;
+    max-width: 400px; 
 }
 
 .modal input {
@@ -131,7 +134,8 @@
     height: 100%;
 }
 
-.overlay {
+.overlay,
+.overlay-2 {
     display: none;
     position: fixed;
     top: 0;
@@ -142,6 +146,42 @@
     z-index: 999;
 }
 
+.error-modal {
+    display: none;
+    text-align: center;
+    color: red;
+    max-width: 300px;
+    z-index: 1001;
+}
+
+.error-modal button {
+    background-color: #ff0000cf;
+    text-align: center; 
+    width: 50%; 
+    min-width: 100px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.error-modal button:hover {
+    background-color: #ff0000;
+}
+
+.overlay-2 {
+   display: none;
+   z-index: 1000;
+}
+
+.toast {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; right: 20px; 
+    background: #333; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1000;
+}
 
 @media (max-width: 30rem) {
     .serveur-container {
@@ -150,10 +190,20 @@
     }
 
     .modal {
-        display: none;
         background-color: white;
         top: 40%;
         width: 85%;
         margin: auto;
     }
+
+    .error-modal {
+        width: 85%;
+    }
+}
+
+
+@media (max-width: 20.81rem) {
+    .error-modal {
+        width: 80%;
+    } 
 }
