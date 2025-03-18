@@ -32,7 +32,7 @@ if (icon && navList && navbarIcon) {
 
 // Fonction pour rafraîchir la page lorsqu'on clique sur le logo
 function logoContainer() {
-  window.location.href = 'index4.html';
+  window.location.href = 'index.html';
 }
 
 // Gestion du dropdown

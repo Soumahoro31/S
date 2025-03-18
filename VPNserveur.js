@@ -321,6 +321,7 @@ function closeModal() {
     document.getElementById("adminPasswordInput").value='';
 }
 
+
 // Fonction pour convertir l'URL Google Drive en URL de téléchargement
 function convertToDownloadUrl(url) {
   const regex = /https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)\/view/;
