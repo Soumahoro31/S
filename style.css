@@ -258,6 +258,11 @@ button:hover {
 
 .hero-buttons .btn-primary {
   background: #007bff;
+  position: relative;
+}
+
+.hero-buttons .btn-primary.active {
+  background: #0056b3;
 }
 
 

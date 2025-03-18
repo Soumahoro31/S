@@ -278,9 +278,8 @@
       <!-- section 7 choix du serveur-->
       <section id="testimonials">
         <div class="container">
-          <h2>Liste des serveurs disponibles</h2>
+          <h2 style="margin-bottom: 20px;">Liste des serveurs disponibles</h2>
           <div class="testimonials-wrapper  wrapper">
-            
           </div>
 
           <!-- Modale pour mettre à jour l'url -->
@@ -294,6 +293,11 @@
 
           <input type="text" id="newUrlInput" placeholder="Nouvelle URL de téléchargement">
 
+          <label for="expiration">Date d'expiration :</label>
+          <input type="datetime-local" id="expiration">
+          <p id="formattedDate">10/10/10/10</p>
+
+
           <button onclick="submitNewUrl()">Soumettre</button>
         </div>
       </section>
@@ -301,7 +305,7 @@
 
       <div id="error-modal" class="error-modal">
         <p id="error-message"></p>
-        <button onclick="closeErrorModal()">Fermer</button>
+        <a onclick="closeErrorModal()">X</a>
       </div>
     <div id="overlay-2" class="overlay-2"></div>
 

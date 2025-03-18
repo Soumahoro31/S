@@ -264,10 +264,12 @@ const openSpinner = (button) => {
   const spinner = button.querySelector('.spinner');
   const premiumSpan1 = button.querySelector('#premium-span1');
   const premiumSpan2 = button.querySelector('#premium-span2');
+  const freeSpan = document.querySelector('#free-span');
 
   if (spinner) spinner.style.display = 'inline-block'; // Afficher le spinner
   if (premiumSpan1) premiumSpan1.style.opacity = '0.5';
   if (premiumSpan2) premiumSpan2.style.opacity = '0.5';
+  if (freeSpan) freeSpan.style.opacity = '0.5';
   
   // Ajouter une classe active au bouton cliqué
   button.classList.add('active');
@@ -313,6 +315,16 @@ preniumBtns.forEach((btn) => {
       closeSpinner(btn); // Cacher le spinner une fois l'action terminée
     }
   });
+});
+
+//fonction pour la redirection lors du click sur le freeBtn
+const freeBtn = document.querySelector('.btn-primary');
+freeBtn.addEventListener('click', () => {
+  openSpinner(freeBtn);
+  setTimeout(() => {
+    window.location.href = '/VPNserveur.html?vpnFile=socksip-tunnel&passType=direct&description=Avec%20nos%20fichiers%20𝙎𝙊𝘾𝙆𝙎𝙄𝙋%20𝙏𝙐𝙉𝙉𝙀𝙇,%20bénéficiez%20d%27une%20navigation%20fluide%20et%20sans%20restriction,%20tout%20en%20maintenant%20une%20sécurité%20optimale.';
+    closeSpinner(freeBtn);
+  }, 3000);
 });
 
 
