@@ -287,17 +287,23 @@
         <div class="modal" id="modal">
           <a><span onclick="closeModal()">x</span></a>
           <h3>Mettre à jour l'URL</h3>
-          <input type="text" id="adminNameInput" placeholder="Nom d'admin">
-
-          <input type="password" id="adminPasswordInput" placeholder="Mot de passe">
-
-          <input type="text" id="newUrlInput" placeholder="Nouvelle URL de téléchargement">
-
-          <label for="expiration">Date d'expiration :</label>
-          <input type="datetime-local" id="expiration">
-          <p id="formattedDate">10/10/10/10</p>
-
-
+        
+          <!-- Champ pour le nom d'admin -->
+          <input type="text" id="adminNameInput" placeholder="Nom d'admin" required>
+        
+          <!-- Champ pour le mot de passe admin -->
+          <input type="password" id="adminPasswordInput" placeholder="Mot de passe" required>
+        
+          <!-- Champ pour la nouvelle URL -->
+          <input type="text" id="newUrlInput" placeholder="Nouvelle URL de téléchargement" required>
+        
+          <!-- Champ pour la date d'expiration -->
+          <input type="datetime-local" id="expirationTimeInput" required>
+        
+          <!-- Affichage de la date formatée (optionnel) -->
+          <p id="formattedDate"></p>
+        
+          <!-- Bouton de soumission -->
           <button onclick="submitNewUrl()">Soumettre</button>
         </div>
       </section>

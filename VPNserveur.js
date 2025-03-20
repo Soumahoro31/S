@@ -166,6 +166,9 @@ function sudAfric() {
   window.location.href = "Sff-afrique-sud.html";
 }
 
+
+
+                                                   
 const BACKEND_URL = "https://8e5rg059k4.execute-api.eu-north-1.amazonaws.com";
 
 let currentServerId = null;
@@ -224,53 +227,35 @@ async function fetchServers(vpnFile, passType) {
         serverDiv.classList.add("testimonial", "serveur-container");
 
         serverDiv.innerHTML = `
-                    <h3>Location: ${server.location}</h3>
-                    <div class="serveurs">
-                        <div>
-                            <img src="${server.imageUrl}" alt="Serveur ${
-          server.location
-        }" class="serveur-image">
-                        </div>
-                        <ul>
-                            <li>Time Left: <span id="time-${index}" class="serveur-time">${timeLeft}</span></li>
-                            <li>Port: ${server.ports}</li>
-                            <li>Duration account: ${server.duration}</li>
-                            <li><strong>Protocol: ${
-                              server.protocol
-                            }</strong></li>
-                        </ul>
-                    </div>
-                    <a href="${
-                      server.downloadUrl
-                    }" class="serveur-button" id="download-button-${index}"
-                       data-vpn-file="${vpnFile}" data-pass-type="${passType}" data-server-id="${
-          server.id
-        }" 
-                       ${
-                         isExpired ? "disabled" : ""
-                       } style="position: relative;">
-                       <span style="position: absolute; display: none;" class="spinner2"></span>
-                       <span class="dowload-span">Télécharger</span>
-                    </a>
-                    ${
-                      isExpired
-                        ? `<button class="serveur-button" onclick="openModal(${server.id}, '${vpnFile}', '${passType}')">Mettre à jour l'URL</button>`
-                        : ""
-                    }
-                `;
+          <h3>Location: ${server.location}</h3>
+          <div class="serveurs">
+            <div>
+              <img src="${server.imageUrl}" alt="Serveur ${server.location}" class="serveur-image">
+            </div>
+            <ul>
+              <li>Time Left: <span id="time-${index}" class="serveur-time">${timeLeft}</span></li>
+              <li>Port: ${server.ports}</li>
+              <li>Duration account: ${server.duration}</li>
+              <li><strong>Protocol: ${server.protocol}</strong></li>
+            </ul>
+          </div>
+          <a href="${server.downloadUrl}" class="serveur-button" id="download-button-${index}"
+             data-vpn-file="${vpnFile}" data-pass-type="${passType}" data-server-id="${server.id}" 
+             ${isExpired ? "disabled" : ""} style="position: relative;">
+             <span style="position: absolute; display: none;" class="spinner2"></span>
+             <span class="dowload-span">Télécharger</span>
+          </a>
+          ${isExpired ? `<button class="serveur-button" onclick="openModal(${server.id}, '${vpnFile}', '${passType}')">Mettre à jour l'URL</button>` : ""}
+        `;
 
         container.appendChild(serverDiv);
 
-        const downloadButton = document.getElementById(
-          `download-button-${index}`
-        );
+        const downloadButton = document.getElementById(`download-button-${index}`);
         if (downloadButton) {
           downloadButton.addEventListener("click", async (event) => {
             if (isExpired) {
               event.preventDefault();
-              showErrorModal(
-                "Le fichier est expiré. Veuillez attendre que l'administrateur le mette à jour."
-              );
+              showErrorModal("Le fichier est expiré. Veuillez attendre que l'administrateur le mette à jour.");
             } else {
               event.preventDefault(); // Empêcher l'ouverture immédiate du lien
               const spinnerTwo = downloadButton.querySelector(".spinner2");
@@ -315,7 +300,6 @@ async function fetchServers(vpnFile, passType) {
     showToast("Une erreur est survenue lors de la récupération des serveurs.");
   }
 }
-
 
 // Fonction pour calculer le temps restant avant expiration
 function getTimeLeft(expirationTime) {
@@ -364,7 +348,27 @@ function closeModal() {
   document.getElementById("newUrlInput").value = "";
   document.getElementById("adminNameInput").value = "";
   document.getElementById("adminPasswordInput").value = "";
+  document.getElementById("expirationTimeInput").value = "";
+  document.getElementById("formattedDate").textContent = "";
+  document.querySelectorAll(".error-message").forEach((el) => {
+    el.textContent = "";
+    el.style.display = "none";
+  });
 }
+
+// Fonction pour afficher la date formatée en temps réel
+document.getElementById("expirationTimeInput").addEventListener("change", function () {
+  const date = new Date(this.value);
+  const formattedDate = date.toLocaleString("fr-FR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).replace(",", " à");
+
+  document.getElementById("formattedDate").textContent = formattedDate;
+});
 
 // Fonction pour convertir l'URL Google Drive en URL de téléchargement
 function convertToDownloadUrl(url) {
@@ -378,25 +382,53 @@ function convertToDownloadUrl(url) {
   return url; // Si ce n'est pas une URL de Google Drive, on la retourne telle quelle
 }
 
+// Fonction pour soumettre le formulaire
 async function submitNewUrl() {
   let newUrl = document.getElementById("newUrlInput").value;
-  newUrl = convertToDownloadUrl(newUrl); // Convertir l'URL si nécessaire
-
+  const expirationTime = document.getElementById("expirationTimeInput").value;
   const adminName = document.getElementById("adminNameInput").value;
   const adminPassword = document.getElementById("adminPasswordInput").value;
 
+  // Réinitialiser les messages d'erreur
+  document.querySelectorAll(".error-message").forEach((el) => {
+    el.textContent = "";
+    el.style.display = "none";
+  });
+
+  // Validation des champs
+  let isValid = true;
+
   if (!isValidUrl(newUrl)) {
-    showErrorModal("Veuillez entrer une URL valide.");
-    return;
+    document.getElementById("newUrlError").textContent = "Veuillez entrer une URL valide.";
+    document.getElementById("newUrlError").style.display = "block";
+    isValid = false;
   }
 
-  if (!adminName || !adminPassword) {
-    showErrorModal("Veuillez remplir tous les champs.");
-    return;
+  if (!expirationTime) {
+    document.getElementById("expirationTimeError").textContent = "Veuillez sélectionner une date d'expiration.";
+    document.getElementById("expirationTimeError").style.display = "block";
+    isValid = false;
   }
 
+  if (!adminName) {
+    document.getElementById("adminNameError").textContent = "Veuillez entrer un nom d'admin.";
+    document.getElementById("adminNameError").style.display = "block";
+    isValid = false;
+  }
+
+  if (!adminPassword) {
+    document.getElementById("adminPasswordError").textContent = "Veuillez entrer un mot de passe.";
+    document.getElementById("adminPasswordError").style.display = "block";
+    isValid = false;
+  }
+
+  if (!isValid) return;
+
+  // *** Conversion de l'URL avant l'envoi ***
+  newUrl = convertToDownloadUrl(newUrl);
+
+  // Envoyer les données au backend
   try {
-    // Vérifier les identifiants admin
     const verificationResponse = await fetch(`${BACKEND_URL}/verify-admin`, {
       method: "POST",
       headers: {
@@ -411,7 +443,6 @@ async function submitNewUrl() {
       return;
     }
 
-    // Mettre à jour l'URL de téléchargement
     const updateResponse = await fetch(
       `${BACKEND_URL}/update-download-url/${currentVpnFile}/${currentPassType}`,
       {
@@ -421,7 +452,8 @@ async function submitNewUrl() {
         },
         body: JSON.stringify({
           serverId: currentServerId,
-          newDownloadUrl: newUrl,
+          newDownloadUrl: newUrl, // *** L'URL convertie est envoyée ici ***
+          expirationTime: expirationTime,
         }),
       }
     );
@@ -433,13 +465,11 @@ async function submitNewUrl() {
     fetchServers(currentVpnFile, currentPassType);
     showToast("L'URL a été mise à jour avec succès !");
   } catch (error) {
-    console.error(
-      "Erreur lors de la mise à jour du lien de téléchargement :",
-      error
-    );
+    console.error("Erreur lors de la mise à jour du lien de téléchargement :", error);
     showErrorModal("Une erreur est survenue lors de la mise à jour du lien.");
   }
 }
+
 
 // Fonction pour valider une URL
 function isValidUrl(url) {
@@ -497,10 +527,10 @@ if (vpnFile && passType) {
   console.error("Aucun fichier VPN ou pass spécifié.");
   const container = document.querySelector(".testimonials-wrapper");
   if (container) {
-    container.innerHTML =
-      "<p>Aucun fichier VPN ou pass spécifié dans l'URL.</p>";
+    container.innerHTML = "<p>Aucun fichier VPN ou pass spécifié dans l'URL.</p>";
   }
 }
+
 
 // Enregistrement du Service Worker
 if ("serviceWorker" in navigator) {
