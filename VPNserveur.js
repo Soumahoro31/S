@@ -384,45 +384,57 @@ function convertToDownloadUrl(url) {
 
 // Fonction pour soumettre le formulaire
 async function submitNewUrl() {
+  const submitButton = document.getElementById("submitButton");
+  const spinnerTwo = submitButton.querySelector(".spinner2");
+  const submitText = submitButton.querySelector(".submit-text");
+
+  // Activer le spinner et désactiver le bouton
+  spinnerTwo.style.display = "inline-block";
+  submitText.style.opacity = "0.5";
+  submitButton.disabled = true;
+
   let newUrl = document.getElementById("newUrlInput").value;
   const expirationTime = document.getElementById("expirationTimeInput").value;
   const adminName = document.getElementById("adminNameInput").value;
   const adminPassword = document.getElementById("adminPasswordInput").value;
 
-  // Réinitialiser les messages d'erreur
-  document.querySelectorAll(".error-message").forEach((el) => {
-    el.textContent = "";
-    el.style.display = "none";
-  });
+  // Vérifier si tous les champs sont vides
+  if (!newUrl && !expirationTime && !adminName && !adminPassword) {
+    showErrorModal("Veuillez remplir tous les champs.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    return;
+  }
 
-  // Validation des champs
-  let isValid = true;
+  // Vérifier chaque champ un par un et afficher un message d'erreur spécifique
+  if (!newUrl) {
+    showErrorModal("Veuillez entrer une URL de téléchargement.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    return;
+  }
 
   if (!isValidUrl(newUrl)) {
-    document.getElementById("newUrlError").textContent = "Veuillez entrer une URL valide.";
-    document.getElementById("newUrlError").style.display = "block";
-    isValid = false;
+    showErrorModal("L'URL de téléchargement n'est pas valide.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    return;
   }
 
   if (!expirationTime) {
-    document.getElementById("expirationTimeError").textContent = "Veuillez sélectionner une date d'expiration.";
-    document.getElementById("expirationTimeError").style.display = "block";
-    isValid = false;
+    showErrorModal("Veuillez sélectionner une date d'expiration.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    return;
   }
 
   if (!adminName) {
-    document.getElementById("adminNameError").textContent = "Veuillez entrer un nom d'admin.";
-    document.getElementById("adminNameError").style.display = "block";
-    isValid = false;
+    showErrorModal("Veuillez entrer un nom d'admin.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    return;
   }
 
   if (!adminPassword) {
-    document.getElementById("adminPasswordError").textContent = "Veuillez entrer un mot de passe.";
-    document.getElementById("adminPasswordError").style.display = "block";
-    isValid = false;
+    showErrorModal("Veuillez entrer un mot de passe.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    return;
   }
-
-  if (!isValid) return;
 
   // *** Conversion de l'URL avant l'envoi ***
   newUrl = convertToDownloadUrl(newUrl);
@@ -440,6 +452,7 @@ async function submitNewUrl() {
     const verificationData = await verificationResponse.json();
     if (!verificationData.success) {
       showErrorModal("Nom d'admin ou mot de passe incorrect.");
+      resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
       return;
     }
 
@@ -467,7 +480,17 @@ async function submitNewUrl() {
   } catch (error) {
     console.error("Erreur lors de la mise à jour du lien de téléchargement :", error);
     showErrorModal("Une erreur est survenue lors de la mise à jour du lien.");
+  } finally {
+    // Réinitialiser le bouton dans tous les cas (succès ou erreur)
+    resetSubmitButton(spinnerTwo, submitText, submitButton);
   }
+}
+
+// Fonction pour réinitialiser le bouton Submit
+function resetSubmitButton(spinnerTwo, submitText, submitButton) {
+  spinnerTwo.style.display = "none"; // Masquer le spinner
+  submitText.style.opacity = "1"; // Rétablir l'opacité du texte
+  submitButton.disabled = false; // Réactiver le bouton
 }
 
 

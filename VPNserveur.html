@@ -304,7 +304,10 @@
           <p id="formattedDate"></p>
         
           <!-- Bouton de soumission -->
-          <button onclick="submitNewUrl()">Soumettre</button>
+          <button style="position: relative;" onclick="submitNewUrl()" id="submitButton">
+            <span style="position: absolute; display: none;" class="spinner2"></span>
+            <span class="submit-text">Soumettre</span>
+          </button>
         </div>
       </section>
 
