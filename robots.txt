@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /index4
+Sitemap: https://sshafric.com/sitemap.xml
