@@ -38,7 +38,7 @@ if (icon && navList && navbarIcon) {
 
 // Fonction pour rafraîchir la page lorsqu'on clique sur le logo
 function logoContainer() {
-  window.location.href = "index4.html";
+  window.location.href = "index.html";
 }
 
 // Gestion du dropdown
@@ -166,9 +166,6 @@ function sudAfric() {
   window.location.href = "Sff-afrique-sud.html";
 }
 
-
-
-                                                   
 const BACKEND_URL = "https://8e5rg059k4.execute-api.eu-north-1.amazonaws.com";
 
 let currentServerId = null;
@@ -230,7 +227,9 @@ async function fetchServers(vpnFile, passType) {
           <h3>Location: ${server.location}</h3>
           <div class="serveurs">
             <div>
-              <img src="${server.imageUrl}" alt="Serveur ${server.location}" class="serveur-image">
+              <img src="${server.imageUrl}" alt="Serveur ${
+          server.location
+        }" class="serveur-image">
             </div>
             <ul>
               <li>Time Left: <span id="time-${index}" class="serveur-time">${timeLeft}</span></li>
@@ -239,23 +238,37 @@ async function fetchServers(vpnFile, passType) {
               <li><strong>Protocol: ${server.protocol}</strong></li>
             </ul>
           </div>
-          <a href="${server.downloadUrl}" class="serveur-button" id="download-button-${index}"
-             data-vpn-file="${vpnFile}" data-pass-type="${passType}" data-server-id="${server.id}" 
+          <div class="dowload-container">
+                      <a href="${
+                        server.downloadUrl
+                      }" class="serveur-button" id="download-button-${index}"
+             data-vpn-file="${vpnFile}" data-pass-type="${passType}" data-server-id="${
+          server.id
+        }" 
              ${isExpired ? "disabled" : ""} style="position: relative;">
              <span style="position: absolute; display: none;" class="spinner2"></span>
              <span class="dowload-span">Télécharger</span>
           </a>
-          ${isExpired ? `<button class="serveur-button" onclick="openModal(${server.id}, '${vpnFile}', '${passType}')">Mettre à jour l'URL</button>` : ""}
+          ${
+            isExpired
+              ? `<a class="serveur-button" onclick="openModal(${server.id}, '${vpnFile}', '${passType}')">Mettre à jour l'URL</a>`
+              : ""
+          }
+          </div>
         `;
 
         container.appendChild(serverDiv);
 
-        const downloadButton = document.getElementById(`download-button-${index}`);
+        const downloadButton = document.getElementById(
+          `download-button-${index}`
+        );
         if (downloadButton) {
           downloadButton.addEventListener("click", async (event) => {
             if (isExpired) {
               event.preventDefault();
-              showErrorModal("Le fichier est expiré. Veuillez attendre que l'administrateur le mette à jour.");
+              showErrorModal(
+                "Le fichier est expiré. Veuillez attendre que l'administrateur le mette à jour."
+              );
             } else {
               event.preventDefault(); // Empêcher l'ouverture immédiate du lien
               const spinnerTwo = downloadButton.querySelector(".spinner2");
@@ -266,7 +279,11 @@ async function fetchServers(vpnFile, passType) {
               downloadButton.classList.add("active");
 
               try {
-                await requestDownloadFromServiceWorker(vpnFile, passType, server.id);
+                await requestDownloadFromServiceWorker(
+                  vpnFile,
+                  passType,
+                  server.id
+                );
 
                 // Attendre que le téléchargement commence avant de masquer le spinner
                 setTimeout(() => {
@@ -357,18 +374,22 @@ function closeModal() {
 }
 
 // Fonction pour afficher la date formatée en temps réel
-document.getElementById("expirationTimeInput").addEventListener("change", function () {
-  const date = new Date(this.value);
-  const formattedDate = date.toLocaleString("fr-FR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).replace(",", " à");
+document
+  .getElementById("expirationTimeInput")
+  .addEventListener("change", function () {
+    const date = new Date(this.value);
+    const formattedDate = date
+      .toLocaleString("fr-FR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+      .replace(",", " à");
 
-  document.getElementById("formattedDate").textContent = formattedDate;
-});
+    document.getElementById("formattedDate").textContent = formattedDate;
+  });
 
 // Fonction pour convertir l'URL Google Drive en URL de téléchargement
 function convertToDownloadUrl(url) {
@@ -478,7 +499,10 @@ async function submitNewUrl() {
     fetchServers(currentVpnFile, currentPassType);
     showToast("L'URL a été mise à jour avec succès !");
   } catch (error) {
-    console.error("Erreur lors de la mise à jour du lien de téléchargement :", error);
+    console.error(
+      "Erreur lors de la mise à jour du lien de téléchargement :",
+      error
+    );
     showErrorModal("Une erreur est survenue lors de la mise à jour du lien.");
   } finally {
     // Réinitialiser le bouton dans tous les cas (succès ou erreur)
@@ -492,7 +516,6 @@ function resetSubmitButton(spinnerTwo, submitText, submitButton) {
   submitText.style.opacity = "1"; // Rétablir l'opacité du texte
   submitButton.disabled = false; // Réactiver le bouton
 }
-
 
 // Fonction pour valider une URL
 function isValidUrl(url) {
@@ -550,10 +573,10 @@ if (vpnFile && passType) {
   console.error("Aucun fichier VPN ou pass spécifié.");
   const container = document.querySelector(".testimonials-wrapper");
   if (container) {
-    container.innerHTML = "<p>Aucun fichier VPN ou pass spécifié dans l'URL.</p>";
+    container.innerHTML =
+      "<p>Aucun fichier VPN ou pass spécifié dans l'URL.</p>";
   }
 }
-
 
 // Enregistrement du Service Worker
 if ("serviceWorker" in navigator) {

@@ -7,10 +7,10 @@
 }
 
 .serveur-container {
+    /* border: 5px solid #007bff; */
     padding: 5px;
     padding-top: 0;
     padding-left: 1.25rem;
-    padding-bottom: 1rem;
 }
 
 .serveur-container h3 {
@@ -52,22 +52,30 @@
    transform: rotate(10deg);
 }
 
-.serveur-button {
-    background-color: rgb(1, 170, 1);
-    transition: all .2s ease-in-out;
-    border-radius: 0;
-    padding: .625rem .875rem;
-    text-decoration: none;
-    color: white;
-    border-radius: 3px;
-    margin-left: .625rem;
-    font-size: .875rem;
+.dowload-container {
+    margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .625rem;
 }
 
-.serveur-button:hover {
-    background-color: green;
-    transform: scale(1.03);
-    color: white;
+.serveur-button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: .5rem 1.2rem;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  font-size: .875rem;
+}
+
+.serveur-button:hover,
+.modal button:hover {
+  color: white;
+  background-color: #0362c9;
+  transform: scale(1.03);
 }
 
 
@@ -106,6 +114,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
 .modal a {
@@ -232,7 +241,6 @@
 
 @media (max-width: 30rem) {
     .serveur-container {
-        padding: 5px;
         padding-left: .625rem;
     }
 
@@ -247,10 +255,6 @@
         width: 85%;
     }
 
-    .serveurs ul {
-        line-height: 1.1;
-    }
-
     .serveurs div img {
         width: 4rem;
      }
@@ -263,6 +267,10 @@
     .spinner {
         width: 1.8rem;
         height: 1.8rem;
+    }
+
+    .serveurs ul {
+        line-height: 1.4;
     }
 }
 
