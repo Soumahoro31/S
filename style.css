@@ -189,6 +189,7 @@ button:hover {
   visibility: hidden;
   transition: opacity 0.9s ease, visibility 0.9s ease,  transform 0.9s ease;
   transform: translateX(30%);
+  padding-top: 5px;
 }
 
 .country-color.active-color {
@@ -443,7 +444,6 @@ button:hover {
 .container-cont h3 {
   font-size: 1.8rem;
   margin-bottom: 30px;
-  color: #fff;
 }
 
 .npv-section .container::-webkit-scrollbar {
@@ -645,9 +645,14 @@ span {
 }
 
 .mission-section h2 {
-  font-size: 2rem;
-  color: #fff;
+  font-size: 2.5rem;
   margin-bottom: 1.25rem;
+  color: white;
+}
+
+.mission-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .mission-section p {
@@ -656,6 +661,7 @@ span {
   max-width: 800px;
   margin: 0 auto 30px;
   padding: 0 1.25rem;
+  margin-bottom: 4rem;
 }
 
 .mission-images {
@@ -727,7 +733,6 @@ span {
 .adv-section .adves h3,
 .adv-section .disadves h3 {
   font-size: 1.8rem;
-  color: #fff;
   margin-bottom: .9375rem;
 }
 
@@ -759,7 +764,7 @@ span {
 }
 
 .installation-guide h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #fff;
   margin-bottom: 1.25rem;
 }
@@ -786,7 +791,6 @@ span {
 
 .step h3 {
   font-size: 1.5rem;
-  color: #ffff;
   margin-bottom: 10px;
   text-align: left;
 }
