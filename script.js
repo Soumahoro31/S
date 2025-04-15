@@ -389,3 +389,29 @@ function animate() {
 }
 
 animate();
+
+
+
+// Fonction pour faire défiler les images automatiquement
+const imgContent = document.getElementById('img-content');
+let scrollAmount = 0;
+
+function autoScrollImages() {
+  const scrollWidth = imgContent.scrollWidth;
+  const containerWidth = imgContent.clientWidth;
+
+  // Si on atteint la fin, revenir au début
+  if (scrollAmount + containerWidth >= scrollWidth) {
+    scrollAmount = 0;
+  } else {
+    scrollAmount += containerWidth; // Défiler d'une largeur de conteneur
+  }
+
+  imgContent.scrollTo({
+    left: scrollAmount,
+    behavior: 'smooth',
+  });
+}
+
+// Défilement automatique toutes les 10 secondes
+setInterval(autoScrollImages, 3000);
