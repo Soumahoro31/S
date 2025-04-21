@@ -673,7 +673,7 @@ button:hover {
 .mission-text h2 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
-  color: var(--secondary-color); /* Couleur secondaire pour le titre */
+  color: #ffffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
