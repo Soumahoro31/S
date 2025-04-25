@@ -297,11 +297,10 @@
           <!-- Champ pour la nouvelle URL -->
           <input type="text" id="newUrlInput" placeholder="Nouvelle URL de téléchargement" required>
         
-          <!-- Champ pour la date d'expiration -->
-          <input type="datetime-local" id="expirationTimeInput" required>
-        
-          <!-- Affichage de la date formatée (optionnel) -->
-          <p id="formattedDate"></p>
+          <div id="dateInputContainer" style="display: block;">
+            <input type="datetime-local" id="expirationTimeInput">
+            <p id="formattedDate"></p>
+          </div>
         
           <!-- Bouton de soumission -->
           <button style="position: relative;" onclick="submitNewUrl()" id="submitButton">

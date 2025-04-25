@@ -442,29 +442,8 @@ button:hover {
   line-height: 1.2;
 }
 
-.npv-section .container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; 
-  max-height: 450px; 
-  overflow-y: scroll; 
-  scroll-snap-type: y mandatory;
-  padding: 1rem;
-  scrollbar-width: none; 
-}
-
 .npv-section .container::-webkit-scrollbar {
   display: none;
-}
-
-.npv-content {
-  background-color: #0040623c;
-  border: 1px solid #dddddd4f;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 6px rgba(245, 243, 243, 0.1);
-  scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .npv-content:hover {
@@ -476,9 +455,6 @@ button:hover {
   width: 100%;
   position: relative;
   padding: 5px 0;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 0;
-  border-right: 0;
 }
 
 .container-cont h3 {
@@ -514,6 +490,9 @@ button:hover {
   margin-top: 0;
   padding: 0 1.25rem;
   grid-auto-flow: dense;
+  max-height: 500px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .npv-content {
@@ -524,6 +503,7 @@ button:hover {
   padding-bottom: 0;
   box-shadow: 0 4px 6px rgba(245, 243, 243, 0.1);
   line-height: 1.1;
+  transition: transform .2s ease;
 }
 
 .npv-content h3 {
@@ -1135,40 +1115,6 @@ footer {
     max-width: 100%;
   }
 
-  /* .npv-section .container {
-    width: 100%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    display: flex;
-    gap: 1rem;
-    max-height: 300px;
-  } */
-
-  /* .npv-content {
-    max-width: 100%; 
-    min-width: auto;
-    padding: 1rem;
-  } */
-
-  /* .npv-section .container::-webkit-scrollbar {
-    height: 8px;
-  } */
-
-  /* .npv-section .container::-webkit-scrollbar-thumb {
-    background-color: #004062;
-    border-radius: 4px;
-  } */
-
-  /* .npv-section .container::-webkit-scrollbar-track {
-    background: #f3f3f3;
-  } */
-
-  /* .npv-content {
-    max-width: 14.0625rem;
-    min-width: 14.0625rem;
-  } */
-
   .mission-section {
     padding: 2rem;
   }
@@ -1229,13 +1175,7 @@ footer {
   }
 
   .npv-section .container {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
-    justify-content: start;
-    max-width: 1200px;
-    margin: 50px auto;
-    margin-top: 0;
-    grid-auto-flow: dense;
   }
 
   .npv-content h3 {
@@ -1337,14 +1277,8 @@ footer {
   }
 
   .npv-section .container {
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(11.25rem, 1fr));
     gap: 1rem;
-    justify-content: start;
-    max-width: 1200px;
-    margin: 50px auto;
-    margin-top: 0;
-    grid-auto-flow: dense;
   }
 
   .npv-content h3 {
@@ -1352,7 +1286,21 @@ footer {
   }
 
   .npv-content p {
-    font-size: .80rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .npv-section .container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    max-height: none;
+  }
+
+  .npv-content {
+    min-width: 200px;
+    max-width: 200px;
   }
 }
 

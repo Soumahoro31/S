@@ -349,13 +349,50 @@ function updateAllTimers(servers) {
   }, 1000);
 }
 
-// Fonction pour ouvrir la modale de mise à jour de l'URL
 function openModal(serverId, vpnFile, passType) {
   currentServerId = serverId;
   currentVpnFile = vpnFile;
   currentPassType = passType;
+
+  const dateInputContainer = document.getElementById('dateInputContainer');
+  const expirationInput = document.getElementById('expirationTimeInput');
+  const formattedDateDisplay = document.getElementById('formattedDate');
+
+  // Clé unique pour ce serveur spécifique
+  const serverKey = `lastExpirationTime_${vpnFile}_${passType}_${serverId}`;
+  const lastExpirationTime = localStorage.getItem(serverKey);
+
+  if (lastExpirationTime) {
+    // Cache le champ mais pré-remplit la date pour information
+    dateInputContainer.style.display = "none";
+    
+    // Affiche la prochaine date calculée (+2j +1min) à titre informatif
+    const nextDate = new Date(lastExpirationTime);
+    nextDate.setDate(nextDate.getDate() + 2);
+    nextDate.setMinutes(nextDate.getMinutes() + 1);
+    
+    formattedDateDisplay.textContent = `Prochaine expiration auto: ${formatDateForDisplay(nextDate)}`;
+  } else {
+    // Affiche le champ pour saisie initiale
+    dateInputContainer.style.display = "block";
+    expirationInput.value = '';
+    formattedDateDisplay.textContent = '';
+  }
+
   document.getElementById("modal").style.display = "block";
   document.getElementById("overlay").style.display = "block";
+}
+
+
+// Fonction helper pour le formatage d'affichage
+function formatDateForDisplay(date) {
+  return date.toLocaleString('fr-FR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  }).replace(',', ' à');
 }
 
 // Fonction pour fermer la modale
@@ -404,108 +441,197 @@ function convertToDownloadUrl(url) {
 }
 
 // Fonction pour soumettre le formulaire
+// async function submitNewUrl() {
+//   const submitButton = document.getElementById("submitButton");
+//   const spinnerTwo = submitButton.querySelector(".spinner2");
+//   const submitText = submitButton.querySelector(".submit-text");
+
+//   // Activer le spinner et désactiver le bouton
+//   spinnerTwo.style.display = "inline-block";
+//   submitText.style.opacity = "0.5";
+//   submitButton.disabled = true;
+
+//   let newUrl = document.getElementById("newUrlInput").value;
+//   const expirationTime = document.getElementById("expirationTimeInput").value;
+//   const adminName = document.getElementById("adminNameInput").value;
+//   const adminPassword = document.getElementById("adminPasswordInput").value;
+
+//   // Vérifier si tous les champs sont vides
+//   if (!newUrl && !expirationTime && !adminName && !adminPassword) {
+//     showErrorModal("Veuillez remplir tous les champs.");
+//     resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//     return;
+//   }
+
+//   // Vérifier chaque champ un par un et afficher un message d'erreur spécifique
+//   if (!newUrl) {
+//     showErrorModal("Veuillez entrer une URL de téléchargement.");
+//     resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//     return;
+//   }
+
+//   if (!isValidUrl(newUrl)) {
+//     showErrorModal("L'URL de téléchargement n'est pas valide.");
+//     resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//     return;
+//   }
+
+//   if (!expirationTime) {
+//     showErrorModal("Veuillez sélectionner une date d'expiration.");
+//     resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//     return;
+//   }
+
+//   if (!adminName) {
+//     showErrorModal("Veuillez entrer un nom d'admin.");
+//     resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//     return;
+//   }
+
+//   if (!adminPassword) {
+//     showErrorModal("Veuillez entrer un mot de passe.");
+//     resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//     return;
+//   }
+
+//   // *** Conversion de l'URL avant l'envoi ***
+//   newUrl = convertToDownloadUrl(newUrl);
+
+//   // Envoyer les données au backend
+//   try {
+//     const verificationResponse = await fetch(`${BACKEND_URL}/verify-admin`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ adminName, adminPassword }),
+//     });
+
+//     const verificationData = await verificationResponse.json();
+//     if (!verificationData.success) {
+//       showErrorModal("Nom d'admin ou mot de passe incorrect.");
+//       resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+//       return;
+//     }
+
+//     const updateResponse = await fetch(
+//       `${BACKEND_URL}/update-download-url/${currentVpnFile}/${currentPassType}`,
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//           serverId: currentServerId,
+//           newDownloadUrl: newUrl, // *** L'URL convertie est envoyée ici ***
+//           expirationTime: expirationTime,
+//         }),
+//       }
+//     );
+
+//     const updateData = await updateResponse.json();
+//     console.log("Serveur mis à jour :", updateData);
+
+//     closeModal();
+//     fetchServers(currentVpnFile, currentPassType);
+//     showToast("L'URL a été mise à jour avec succès !");
+//   } catch (error) {
+//     console.error(
+//       "Erreur lors de la mise à jour du lien de téléchargement :",
+//       error
+//     );
+//     showErrorModal("Une erreur est survenue lors de la mise à jour du lien.");
+//   } finally {
+//     // Réinitialiser le bouton dans tous les cas (succès ou erreur)
+//     resetSubmitButton(spinnerTwo, submitText, submitButton);
+//   }
+// }
+
+
 async function submitNewUrl() {
   const submitButton = document.getElementById("submitButton");
   const spinnerTwo = submitButton.querySelector(".spinner2");
   const submitText = submitButton.querySelector(".submit-text");
 
-  // Activer le spinner et désactiver le bouton
+  // Activation du spinner
   spinnerTwo.style.display = "inline-block";
   submitText.style.opacity = "0.5";
   submitButton.disabled = true;
 
+  // Récupération des valeurs
   let newUrl = document.getElementById("newUrlInput").value;
-  const expirationTime = document.getElementById("expirationTimeInput").value;
+  let expirationTime = document.getElementById("expirationTimeInput").value;
   const adminName = document.getElementById("adminNameInput").value;
   const adminPassword = document.getElementById("adminPasswordInput").value;
 
-  // Vérifier si tous les champs sont vides
-  if (!newUrl && !expirationTime && !adminName && !adminPassword) {
-    showErrorModal("Veuillez remplir tous les champs.");
-    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+  // Validation des champs
+  if (!newUrl || !adminName || !adminPassword) {
+    showErrorModal("Veuillez remplir tous les champs obligatoires.");
+    resetSubmitButton(spinnerTwo, submitText, submitButton);
     return;
   }
 
-  // Vérifier chaque champ un par un et afficher un message d'erreur spécifique
-  if (!newUrl) {
-    showErrorModal("Veuillez entrer une URL de téléchargement.");
-    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
-    return;
-  }
-
-  if (!isValidUrl(newUrl)) {
-    showErrorModal("L'URL de téléchargement n'est pas valide.");
-    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
-    return;
-  }
-
-  if (!expirationTime) {
-    showErrorModal("Veuillez sélectionner une date d'expiration.");
-    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
-    return;
-  }
-
-  if (!adminName) {
-    showErrorModal("Veuillez entrer un nom d'admin.");
-    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
-    return;
-  }
-
-  if (!adminPassword) {
-    showErrorModal("Veuillez entrer un mot de passe.");
-    resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
-    return;
-  }
-
-  // *** Conversion de l'URL avant l'envoi ***
+  // Conversion URL
   newUrl = convertToDownloadUrl(newUrl);
 
-  // Envoyer les données au backend
+  // Gestion des dates par serveur
+  const serverKey = `lastExpirationTime_${currentVpnFile}_${currentPassType}_${currentServerId}`;
+
+  if (!expirationTime) {
+    // Récupération de la dernière date pour CE SERVEUR
+    const lastExpirationTime = localStorage.getItem(serverKey);
+    
+    if (lastExpirationTime) {
+      // Calcul nouvelle date (+2j +1min)
+      const newExpirationDate = new Date(lastExpirationTime);
+      newExpirationDate.setDate(newExpirationDate.getDate() + 2);
+      newExpirationDate.setMinutes(newExpirationDate.getMinutes() + 1);
+      expirationTime = newExpirationDate.toISOString().slice(0, 16);
+    } else {
+      showErrorModal(`Veuillez saisir une date d'expiration initiale pour le serveur ${currentServerId}`);
+      resetSubmitButton(spinnerTwo, submitText, submitButton);
+      return;
+    }
+  } else {
+    // Sauvegarde de la date pour CE SERVEUR
+    localStorage.setItem(serverKey, expirationTime);
+  }
+
+  // Envoi au backend
   try {
     const verificationResponse = await fetch(`${BACKEND_URL}/verify-admin`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ adminName, adminPassword }),
     });
 
-    const verificationData = await verificationResponse.json();
-    if (!verificationData.success) {
-      showErrorModal("Nom d'admin ou mot de passe incorrect.");
-      resetSubmitButton(spinnerTwo, submitText, submitButton); // Réinitialiser le bouton
+    if (!(await verificationResponse.json()).success) {
+      showErrorModal("Authentification admin échouée");
+      resetSubmitButton(spinnerTwo, submitText, submitButton);
       return;
     }
 
-    const updateResponse = await fetch(
+    await fetch(
       `${BACKEND_URL}/update-download-url/${currentVpnFile}/${currentPassType}`,
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           serverId: currentServerId,
-          newDownloadUrl: newUrl, // *** L'URL convertie est envoyée ici ***
-          expirationTime: expirationTime,
+          newDownloadUrl: newUrl,
+          expirationTime: expirationTime
         }),
       }
     );
 
-    const updateData = await updateResponse.json();
-    console.log("Serveur mis à jour :", updateData);
-
     closeModal();
     fetchServers(currentVpnFile, currentPassType);
-    showToast("L'URL a été mise à jour avec succès !");
+    showToast("Mise à jour réussie !");
+
   } catch (error) {
-    console.error(
-      "Erreur lors de la mise à jour du lien de téléchargement :",
-      error
-    );
-    showErrorModal("Une erreur est survenue lors de la mise à jour du lien.");
+    console.error("Erreur:", error);
+    showErrorModal("Échec de la mise à jour");
   } finally {
-    // Réinitialiser le bouton dans tous les cas (succès ou erreur)
     resetSubmitButton(spinnerTwo, submitText, submitButton);
   }
 }
