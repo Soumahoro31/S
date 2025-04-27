@@ -44,8 +44,8 @@ button {
   background-color: #09e809;
   color: white;
   border: none;
-  padding: 10px 1.25rem;
-  border-radius: 5px;
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -61,7 +61,7 @@ button:hover {
   background-color: #041e2c;
   display: flex;
   justify-content: space-between;
-  padding: 10px 25px;
+  padding: .625rem 1.5625rem;
   position: relative;
   transition: all 0.3s ease;
   z-index: 1000;
@@ -88,8 +88,8 @@ button:hover {
 
 .logo-container img {
   width: 2.5rem;
-  border-radius: 5px;
-  margin-left: 5px;
+  border-radius: .3125rem;
+  margin-left: .3125rem;
 }
 
 /* navbar-icon */
@@ -99,7 +99,7 @@ button:hover {
 }
 
 .navbar-icon img {
-  width: 50px;
+  width: 3.125rem;
   height: auto;
   display: none;
 }
@@ -117,12 +117,12 @@ button:hover {
   display: flex;
   list-style: none;
   margin: 0;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 .nav-list li {
   cursor: pointer;
-  padding: 5px;
+  padding: .3125rem;
   transition: background-color 0.2s ease;
 }
 
@@ -140,7 +140,7 @@ button:hover {
   opacity: 0;
   background-color: #041e2c;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+  padding: .625rem 0;
   font-size: 1rem;
   box-sizing: border-box;
   color: #ffffff;
@@ -155,14 +155,14 @@ button:hover {
 }
 
 .dropdown-menu li {
-  padding: 10px 10px;
+  padding: .625rem .625rem;
   white-space: nowrap;
   transition: background-color 0.1s ease;
   margin: 0;
   display: flex;
-  gap: 10px;
+  gap: .625rem;
   align-items: center;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff26;
 }
 
 .dropdown-menu li:hover {
@@ -178,7 +178,7 @@ button:hover {
 
 .dropdown-trigger:after {
   content: "\25BC";
-  margin-left: 8px;
+  margin-left: .5rem;
   transition: transform 0.3s ease;
 }
 
@@ -191,7 +191,7 @@ button:hover {
   visibility: hidden;
   transition: opacity 0.9s ease, visibility 0.9s ease, transform 0.9s ease;
   transform: translateX(30%);
-  padding-top: 5px;
+  padding-top: .3125rem;
 }
 
 .country-color.active-color {
@@ -239,14 +239,14 @@ button:hover {
 
 .hero-content p {
   font-size: 1.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons a {
   display: inline-block;
-  padding: 0.9375rem 30px;
-  margin: 0 10px;
+  padding: 0.9375rem 1.875rem;
+  margin: 0 .625rem;
   font-size: 1rem;
   color: #fff;
   text-decoration: none;
@@ -310,70 +310,9 @@ button:hover {
   background: #0056b3;
 }
 
-/* id-input-container */
-.id-input-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-.id-input-container p {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-  color: #fff;
-}
-
-.id-input-container textarea {
-  width: 90%;
-  height: 1.25rem;
-  margin: auto;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: #ffffff;
-  border: 1px solid #007bff;
-}
-
-.id-input-container a {
-  background-color: #ff9500;
-  width: 100px;
-  margin: auto;
-  display: inline-block;
-  padding: 7px 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, transform 0.3s;
-  cursor: pointer;
-}
-
-.id-input-container a:hover {
-  transform: scale(1.03);
-  background-color: #ff7800;
-}
-
-.id-input-container a:active {
-  transform: scale(1);
-}
-
-#span2 {
-  display: none;
-}
-
-.confirme-action,
-.confirme-action2 {
-  color: #fff;
-  display: none;
-  padding-left: 5px;
-  font-size: 1rem;
-}
-
 /* advantages-section */
 .advantages-section {
-  padding: 60px 1.25rem;
+  padding: 3.75rem 1.25rem;
   background-color: #041e2c;
   text-align: center;
 }
@@ -405,7 +344,7 @@ button:hover {
 .advantage {
   background-color: #0040623c;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: .5rem;
   padding: 1.25rem;
   box-shadow: 0 4px 6px rgba(254, 253, 253, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -419,14 +358,14 @@ button:hover {
 }
 
 .advantage img {
-  width: 60px;
+  width: 3.75rem;
   margin-bottom: 0.9375rem;
   border-radius: 50% 1px;
 }
 
 .advantage h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
   color: #fff;
 }
 
@@ -454,12 +393,12 @@ button:hover {
 .npv-section .container-cont {
   width: 100%;
   position: relative;
-  padding: 5px 0;
+  padding: .3125rem 0;
 }
 
 .container-cont h3 {
   font-size: 1.8rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .npv-section .container::-webkit-scrollbar {
@@ -488,17 +427,18 @@ button:hover {
   max-width: 1200px;
   margin: 50px auto;
   margin-top: 0;
-  padding: 0 1.25rem;
+  padding: 1.25rem;
   grid-auto-flow: dense;
   max-height: 500px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  background-color: rgb(5, 13, 20);
 }
 
 .npv-content {
-  background-color: #0040623c;
+  background-color: #022031;
   border: 1px solid #dddddd4f;
-  border-radius: 8px;
+  border-radius: .5rem;
   padding: 0.5rem;
   padding-bottom: 0;
   box-shadow: 0 4px 6px rgba(245, 243, 243, 0.1);
@@ -549,7 +489,7 @@ button:hover {
 
 /* .npv-content ul li span, */
 .npv-content ul li a {
-  margin-left: 10px;
+  margin-left: .625rem;
   font-size: 0.9rem;
   color: #f8f80f;
   text-decoration: underline;
@@ -562,7 +502,7 @@ button:hover {
 }
 
 .npv-content ul li span {
-  margin-left: 10px;
+  margin-left: .625rem;
   font-size: 0.9rem;
 }
 
@@ -589,8 +529,8 @@ button:hover {
   align-items: center;
   padding: 2rem;
   color: #fff;
-  border-radius: 10px;
-  margin: 0 10px;
+  border-radius: .625rem;
+  margin: 0 .625rem;
   width: 95%;
   margin: auto;
   box-sizing: border-box;
@@ -616,7 +556,7 @@ button:hover {
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: .3125rem;
   transition: background 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -630,7 +570,7 @@ button:hover {
 .cta-image img {
   max-width: 350px;
   height: auto;
-  border-radius: 10px;
+  border-radius: .625rem;
   opacity: 0.7;
 }
 
@@ -660,8 +600,8 @@ button:hover {
   background: linear-gradient(135deg, #041e2c, #004062); /* Dégradé élégant */
   padding: 4rem 2rem;
   color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: .625rem;
+  box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.2);
 }
 
 .mission-section .container {
@@ -712,8 +652,8 @@ button:hover {
 .img-content img {
   flex: 0 0 80%; /* Chaque image occupe 80% de la largeur du conteneur */
   max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: .625rem;
+  box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: center; /* Aligne chaque image au centre lors du défilement */
 }
@@ -731,7 +671,7 @@ button:hover {
 .adv-section h2 {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -747,8 +687,8 @@ button:hover {
 .adv-section .disadves {
   background-color: #0040623c;
   border: 1px solid #dddddd4f;
-  box-shadow: 0 4px 8px rgba(155, 154, 154, 0.1);
-  border-radius: 8px;
+  box-shadow: 0 4px .5rem rgba(155, 154, 154, 0.1);
+  border-radius: .5rem;
   padding: 1.25rem;
   width: 100%;
   max-width: 400px;
@@ -769,7 +709,7 @@ button:hover {
 .adv-section li {
   font-size: 1.1rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
   line-height: 1.5rem;
 }
 
@@ -777,8 +717,8 @@ button:hover {
 .installation-guide {
   padding: 2.5rem 1.25rem;
   background-color: #041e2c;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(203, 201, 201, 0.1);
+  border-radius: .625rem;
+  box-shadow: 0 4px .5rem rgba(203, 201, 201, 0.1);
   margin: 0 auto;
   text-align: center;
   line-height: normal;
@@ -794,7 +734,7 @@ button:hover {
 .installation-guide p {
   font-size: 1rem;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .installation-steps {
@@ -807,13 +747,13 @@ button:hover {
   background-color: #0040623c;
   /* border: 1px solid #dddddd4f; */
   padding: 1.25rem;
-  border-radius: 8px;
+  border-radius: .5rem;
   box-shadow: 0 2px 6px rgba(199, 199, 199, 0.1);
 }
 
 .step h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
   text-align: left;
 }
 
@@ -827,10 +767,10 @@ button:hover {
 .step img {
   width: 95%;
   height: 400px;
-  border-radius: 5px;
+  border-radius: .3125rem;
   box-shadow: 0 2px 4px rgba(218, 217, 217, 0.1);
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: .625rem;
   background: linear-gradient(135deg, #343a3c, #0099cc);
 }
 
@@ -838,13 +778,13 @@ button:hover {
 .step:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(250, 248, 248, 0.2);
+  box-shadow: 0 4px .625rem rgba(250, 248, 248, 0.2);
 }
 
 /* fat-section */
 .fat-section {
   padding: 2.5rem 1.25rem;
-  border-radius: 10px;
+  border-radius: .625rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -852,7 +792,7 @@ button:hover {
 .fat-section h2 {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: #ffffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -865,14 +805,14 @@ button:hover {
 
 .faq-item {
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: .5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -891,6 +831,7 @@ button:hover {
 
 .fat-question:hover {
   background-color: #0056b3;
+  font-size: 1.2rem;
 }
 
 .faq-answer {
@@ -918,7 +859,7 @@ button:hover {
 
 .section-title {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: #fff;
 }
 /* Témoignages */
@@ -939,7 +880,7 @@ button:hover {
   right: 0;
   margin: auto;
   background-color: #f0f4f8;
-  border-radius: 10px;
+  border-radius: .625rem;
 }
 
 .testimonial.active {
@@ -969,11 +910,11 @@ button:hover {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 0.9375rem;
+  padding: .625rem 0.9375rem;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
-  margin: 0 10px;
+  border-radius: .3125rem;
+  margin: 0 .625rem;
   transition: background-color 0.3s ease;
 }
 
@@ -989,7 +930,7 @@ button:hover {
 .contact-section h2 {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: #ffffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -997,8 +938,8 @@ button:hover {
 .conctact-container {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
+  padding: .625rem;
+  border-radius: .625rem .625rem 0 0;
   background-color: #0040623c;
 }
 
@@ -1007,7 +948,7 @@ button:hover {
   font-size: 1rem;
   font-weight: bold;
   background-color: #ffc107;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -1021,7 +962,7 @@ button:hover {
   flex-direction: column;
   padding: 0.9375rem;
   padding-top: 0;
-  gap: 10px;
+  gap: .625rem;
   align-items: left;
   justify-content: center;
 }
@@ -1034,7 +975,7 @@ button:hover {
   text-decoration: none;
   color: #fff;
   background-color: #007bff;
-  border-radius: 10px;
+  border-radius: .625rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -1056,7 +997,7 @@ button:hover {
 .images-cont img {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: .3125rem;
   opacity: 0.9;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -1069,7 +1010,7 @@ button:hover {
 /* footer */
 footer {
   text-align: center;
-  padding: 10px;
+  padding: .625rem;
   background-color: #041e2c;
   color: #fff;
 }
@@ -1085,7 +1026,7 @@ footer {
   }
 
   .hero-buttons a {
-    margin: 10px;
+    margin: .625rem;
   }
 
   .mission-images {
@@ -1095,14 +1036,14 @@ footer {
 
   .header-section {
     position: relative;
-    padding: 10px 0.9375rem;
+    padding: .625rem 0.9375rem;
   }
 
   .cta-section {
     align-items: center;
     padding: 1rem;
     color: #fff;
-    border-radius: 10px;
+    border-radius: .625rem;
     margin: 0 0.9375rem;
     width: 95%;
     margin: auto;
@@ -1157,8 +1098,8 @@ footer {
     width: 30%;
     position: absolute;
     background-color: #041e2c7f;
-    padding: 10px 0;
-    padding-left: 10px;
+    padding: .625rem 0;
+    padding-left: .625rem;
     font-size: 1rem;
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   }
@@ -1194,7 +1135,7 @@ footer {
 
   .header-section {
     padding: 0.9375rem;
-    padding-left: 8px;
+    padding-left: .5rem;
   }
 
   .logo-container p {
@@ -1236,17 +1177,17 @@ footer {
 
   .conctact-container {
     flex-direction: column;
-    border-radius: 10px 10px 0 0;
+    border-radius: .625rem .625rem 0 0;
   }
 
   .cta-image img {
     width: 250px;
     height: auto;
-    border-radius: 10px;
+    border-radius: .625rem;
   }
 
   .hero-buttons a {
-    padding: 10px 30px;
+    padding: .625rem 1.875rem;
   }
 
   .adv-section h2,
@@ -1296,6 +1237,7 @@ footer {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     max-height: none;
+    padding: 1.25rem 1rem;
   }
 
   .npv-content {
